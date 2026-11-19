@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0D1B32">
+    <title>Nova - Administration</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <aside class="sidebar" id="sidebar" aria-label="Navigation principale">
+
+        <div class="sidebar-header">
+
+            <a href="#" class="logo" aria-label="Nova, accueil">
+                <span class="logo-icon">N</span>
+                <span class="logo-name">NOVA</span>
+            </a>
+
+            <button class="close-menu" id="closeMenu" aria-label="Fermer le menu">
+                &times;
+            </button>
+        </div>
+
+        <nav class="navigation" aria-label="Menu principal">
+            <p class="nav-heading">MENU PRINCIPAL</p>
+
+            <ul class="nav-list">
+                <li>
+                    <a href="#" class="nav-link active" aria-current="page">
+                        <span class="nav-icon" aria-hidden="true">▦</span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon" aria-hidden="true">▤</span>
+                        <span>Commandes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon" aria-hidden="true">♙</span>
+                        <span>Clients</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon" aria-hidden="true">⚙</span>
+                        <span>Paramètres</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="support-card">
+                <div class="support-icon" aria-hidden="true">💬</div>
+
+                <h2>Besoin d'aide ?</h2>
+
+                <p>
+                    Notre équipe vous répond sous quelques minutes.
+                </p>
+
+                <a href="mailto:support@nova.fr" class="support-button">
+                    Contacter le support
+                </a>
+            </div>
+        </div>
+
+    </aside>
+
+    <button class="sidebar-overlay" id="sidebarOverlay" aria-label="Fermer le menu"></button>
+
+
+    <main class="main-content">
+
+        <!-- NAVBAR -->
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <!-- Bouton burger : tablette et mobile -->
+                <button class="burger-button" id="burgerButton" aria-label="Ouvrir le menu" aria-expanded="false"
+                    aria-controls="sidebar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Barre de recherche -->
+                <div class="search-box">
+                    <span class="search-icon" aria-hidden="true">⌕</span>
+                    <input type="search" placeholder="Rechercher..." aria-label="Rechercher">
+                    <span class="search-shortcut" aria-hidden="true">⌘ K</span>
+                </div>
+
+            </div>
+
+            <!-- Partie droite de la navbar -->
+            <div class="topbar-right">
+
+                <!-- Notifications -->
+                <button class="notification-button" aria-label="Notifications">
+                    <span aria-hidden="true">♧</span>
+                    <span class="notification-dot"></span>
+                </button>
+
+                <!-- Profil utilisateur -->
+                <div class="user-profile">
+
+                    <div class="user-avatar" aria-hidden="true">
+                        ML
+                    </div>
+
+                    <div class="user-info">
+                        <span class="user-name">Marie Laurent</span>
+                        <span class="user-role">Administratrice</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENU DU DASHBOARD -->
+        <section class="dashboard-section" aria-labelledby="dashboard-title">
+
+            <div class="dashboard-heading">
+
+                <div class="dashboard-title">
+                    <h1 id="dashboard-title">Tableau de bord</h1>
+
+                    <p>
+                        Voici les performances de votre boutique aujourd'hui
+                    </p>
+                </div>
+
+                <!-- Sélecteur de dates -->
+                <button class="date-selector" type="button">
+                    <span aria-hidden="true">▦</span>
+                    <span>1-7 oct 2026</span>
+                    <span class="date-chevron" aria-hidden="true">⌄</span>
+                </button>
+
+            </div>
+
+            <!-- INDICATEURS DE PERFORMANCE -->
+            <div class="stats-panel" aria-label="Indicateurs de performance">
+
+                <article class="stat-card">
+                    <div class="stat-card-header">
+                        <h2>Commandes du jour</h2>
+                        <span class="stat-icon" aria-hidden="true">📦</span>
+                    </div>
+
+                    <div class="stat-card-value">
+                        <strong>284</strong>
+                        <span class="stat-evolution positive">+12,5 %</span>
+                    </div>
+
+                    <p class="stat-description">Par rapport à la période précédente</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-card-header">
+                        <h2>Chiffre d'affaires</h2>
+                        <span class="stat-icon" aria-hidden="true">💰</span>
+                    </div>
+
+                    <div class="stat-card-value">
+                        <strong>12 450 €</strong>
+                        <span class="stat-evolution positive">+8,2 %</span>
+                    </div>
+
+                    <p class="stat-description">Par rapport à la période précédente</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-card-header">
+                        <h2>Nouveaux clients</h2>
+                        <span class="stat-icon" aria-hidden="true">👥</span>
+                    </div>
+
+                    <div class="stat-card-value">
+                        <strong>156</strong>
+                        <span class="stat-evolution positive">+6,4 %</span>
+                    </div>
+
+                    <p class="stat-description">Par rapport à la période précédente</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-card-header">
+                        <h2>Taux de conversion</h2>
+                        <span class="stat-icon" aria-hidden="true">📈</span>
+                    </div>
+
+                    <div class="stat-card-value">
+                        <strong>3,8 %</strong>
+                        <span class="stat-evolution positive">+0,7 %</span>
+                    </div>
+
+                    <p class="stat-description">Par rapport à la période précédente</p>
+                </article>
+
+            </div>
+
+            <!-- GRAPHIQUE DU CHIFFRE D'AFFAIRES -->
+            <section class="chart-section" aria-labelledby="revenue-title">
+
+                <div class="chart-card">
+
+                    <div class="chart-header">
+
+                        <div class="chart-title">
+                            <h2 id="revenue-title">Chiffre d'affaires</h2>
+                            <p>Évolution de votre chiffre d'affaires sur les 7 derniers jours</p>
+                        </div>
+
+                        <div class="revenue-label">
+                            <span class="revenue-dot"></span>
+                            <span>Revenu</span>
+                        </div>
+
+                    </div>
+
+                    <div class="chart-image">
+                        <img src="assets/graph.png" alt="Graphique présentant l'évolution du chiffre d'affaires">
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="orders-section" aria-labelledby="orders-title">
+
+                <div class="orders-card">
+
+                    <div class="orders-header">
+
+                        <a href="commandes.html" class="orders-see-all">
+                            Voir tout
+                        </a>
+
+                        <div class="orders-heading">
+                            <h2 id="orders-title">Commandes récentes</h2>
+                            <p>Les dernières activités de votre boutique</p>
+                        </div>
+
+                    </div>
+
+                    <div class="orders-table-wrapper">
+
+                        <table class="orders-table">
+
+                            <thead>
+                                <tr>
+                                    <th scope="col">CLIENT</th>
+                                    <th scope="col">STATUT</th>
+                                    <th scope="col">MONTANT</th>
+                                    <th scope="col" class="date-column">DATE ET HEURE</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <div class="client-info">
+                                            <span class="client-avatar">CD</span>
+                                            <div>
+                                                <strong>Camille Dupont</strong>
+                                                <span>camille.dupont@mail.fr</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="status-badge delivered">Livrée</span>
+                                    </td>
+
+                                    <td class="order-amount">125,00 €</td>
+
+                                    <td class="date-column">
+                                        <div class="order-date">
+                                            <strong>Aujourd'hui</strong>
+                                            <span>14:32</span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="client-info">
+                                            <span class="client-avatar avatar-orange">ML</span>
+                                            <div>
+                                                <strong>Marie Laurent</strong>
+                                                <span>marie.laurent@mail.fr</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="status-badge preparing">En préparation</span>
+                                    </td>
+
+                                    <td class="order-amount">89,90 €</td>
+
+                                    <td class="date-column">
+                                        <div class="order-date">
+                                            <strong>Aujourd'hui</strong>
+                                            <span>11:45</span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="client-info">
+                                            <span class="client-avatar avatar-purple">TB</span>
+                                            <div>
+                                                <strong>Thomas Bernard</strong>
+                                                <span>thomas.bernard@mail.fr</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="status-badge cancelled">Annulée</span>
+                                    </td>
+
+                                    <td class="order-amount">210,00 €</td>
+
+                                    <td class="date-column">
+                                        <div class="order-date">
+                                            <strong>Hier</strong>
+                                            <span>16:20</span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="client-info">
+                                            <span class="client-avatar avatar-green">SL</span>
+                                            <div>
+                                                <strong>Sophie Leroy</strong>
+                                                <span>sophie.leroy@mail.fr</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="status-badge delivered">Livrée</span>
+                                    </td>
+
+                                    <td class="order-amount">64,50 €</td>
+
+                                    <td class="date-column">
+                                        <div class="order-date">
+                                            <strong>Hier</strong>
+                                            <span>10:15</span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+</body>
+
+</html>
